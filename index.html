@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SpeKtur – Sistem Perlindungan &amp; Intervensi Sahsiah Terpadu</title>
+<style>
+:root{--bg:#f3f6fb;--card:#fff;--ink:#14213d;--mut:#556078;--br:#0b5cad;--bi:#fff;--ln:#d8e0ee;--ok:#157347;--wn:#9a5b00;--bd:#b42318;--soft:#e6f0fc;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1523;--card:#172136;--ink:#e8edf7;--mut:#9fabc4;--br:#5aa2f0;--bi:#0b1220;--ln:#2a3550;--ok:#4cc38a;--wn:#f0b34a;--bd:#ff8a80;--soft:#1b2a45;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1523;--card:#172136;--ink:#e8edf7;--mut:#9fabc4;--br:#5aa2f0;--bi:#0b1220;--ln:#2a3550;--ok:#4cc38a;--wn:#f0b34a;--bd:#ff8a80;--soft:#1b2a45;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--br)}
+.w{max-width:960px;margin:0 auto;padding:0 16px}
+header{background:var(--br);color:var(--bi)}
+header .w{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px;padding-top:10px;padding-bottom:10px}
+header b{font-size:1.15rem}
+nav{display:flex;flex-wrap:wrap;gap:4px}
+nav a{color:inherit;text-decoration:none;padding:7px 11px;border-radius:8px;font-weight:600;font-size:.92rem}
+nav a.on{background:rgba(0,0,0,.2)}
+.th{background:transparent;color:inherit;border:1px solid currentColor;border-radius:8px;padding:6px 11px;font:inherit;font-weight:600;font-size:.88rem;cursor:pointer}
+h1{font-size:1.65rem;margin:.7em 0 .2em}h2{font-size:1.2rem;margin:.1em 0 .5em}
+.m{color:var(--mut)}
+.c{background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:18px;margin:14px 0}
+.g{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin-top:14px}
+.t{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--ln);border-top:5px solid var(--br);border-radius:14px;padding:18px;text-align:center}
+.t span{display:block;font-size:2rem}.t b{display:block;margin-top:4px}.t small{color:var(--mut)}
+.n{background:var(--soft);border-left:4px solid var(--br);padding:10px 14px;border-radius:8px;font-size:.92rem}
+.n.x{border-left-color:var(--wn)}
+label{display:block;font-weight:600;margin:12px 0 4px}
+input,select,textarea{width:100%;box-sizing:border-box;padding:10px;border:1px solid var(--ln);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+.r{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.f{display:flex;gap:8px}
+.b{display:inline-block;background:var(--br);color:var(--bi);border:0;border-radius:10px;padding:10px 16px;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;margin:2px 0}
+.b.o{background:transparent;color:var(--br);border:1px solid var(--br)}
+.k{display:inline-block;padding:2px 10px;border-radius:99px;font-size:.8rem;font-weight:700;margin-left:6px}
+.ok{background:var(--ok);color:var(--bi)}.wn{background:var(--wn);color:var(--bi)}.bd{background:var(--bd);color:var(--bi)}.mu{background:var(--mut);color:var(--bi)}
+.fl{padding-left:1.2em;margin:0}.fl li{margin:6px 0}
+details{border-top:1px solid var(--ln);padding:8px 0}summary{cursor:pointer;font-weight:600}
+.tl{list-style:none;padding:0;margin:8px 0 0;border-left:2px solid var(--ln)}.tl li{margin:0 0 8px 12px;font-size:.9rem;color:var(--mut)}
+.s{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+.s div{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:12px;text-align:center;font-size:.85rem;color:var(--mut)}.s b{font-size:1.5rem;color:var(--ink)}
+.v{display:none}.v.on{display:block}
+footer{color:var(--mut);font-size:.85rem;padding:18px 16px 28px}
+
+:root{box-sizing:border-box}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #7b4be8;outline-offset:2px}
+.w{max-width:1080px}
+header{background:#0c1442;color:#fff}
+header .hd{gap:10px 18px}
+.lg{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;margin-right:auto}
+.lg b{display:block;font-size:1.5rem;line-height:1.1;font-weight:800;letter-spacing:-.01em}
+.lg small{display:block;font-size:.68rem;color:#b9c3f0;max-width:210px;line-height:1.25}
+header nav a.on{background:rgba(255,255,255,.14)}
+header nav a.lm{background:#7b4be8;border-radius:10px}
+header nav a.lm.on{background:#6a3bd6}
+.hero{background:linear-gradient(115deg,#0c1442 0%,#1b2f9e 55%,#5b3fd1 100%);color:#fff}
+.hr{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:34px;padding-bottom:34px}
+.ht{flex:1 1 360px;max-width:560px}
+.ht h1{font-size:clamp(3rem,9vw,5rem);line-height:1;margin:0;font-weight:800;letter-spacing:-.03em;font-style:italic}
+.ht h1 span,.ht h2 em{color:#b79cff}
+.ht h2{font-size:clamp(1.4rem,3.4vw,2rem);line-height:1.2;margin:.6em 0 .5em}
+.ht h2 em{font-style:normal}
+.sub{border-left:4px solid #7b4be8;padding-left:12px;color:#dfe5ff;margin:0 0 20px}
+.cta{display:inline-block;background:#7b4be8;color:#fff;text-decoration:none;font-weight:700;border-radius:12px;padding:12px 22px}
+.hp{flex:0 1 230px;text-align:center}
+.sl{font:italic 1.3rem/1.25 "Segoe Script","Brush Script MT",cursive;color:#e6e9ff;margin:0 0 10px;text-align:right}
+.ph{width:min(180px,60%);height:auto}
+.tiles{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin:22px 0}
+.ti{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;border-radius:14px;padding:16px;min-height:78px}
+.ti .ic{width:38px;height:38px;flex:none}
+.ti span{flex:1;font-size:.82rem;line-height:1.3}
+.ti b{display:block;font-size:1.02rem;margin-bottom:2px}
+.ti i{flex:none;width:28px;height:28px;border-radius:50%;background:#fff;color:#1a1a1a;display:grid;place-items:center;font-style:normal;font-weight:800}
+.t1{background:#1f4fd8}.t2{background:#6c43d8}.t3{background:#0b7d6e}.t4{background:#a86d00}
+.ig{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-bottom:26px}
+.pn{background:var(--card);border:1px solid var(--ln);border-radius:16px;padding:18px}
+.pn p{margin:0 0 12px;font-size:.95rem}
+.pt{display:inline-flex;align-items:center;gap:8px;background:#14206b;color:#fff;border-radius:99px;padding:6px 18px 6px 8px;font-size:1.15rem;font-weight:800;margin:0 0 12px}
+.pt .ic{width:26px;height:26px;background:#fff;color:#14206b;border-radius:50%;padding:4px}
+.pl{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;text-align:center;font-size:.8rem;font-weight:700}
+.pl>div{flex:1 1 70px}
+.pp{flex:none;color:var(--br);font-size:1.3rem}
+.ci{display:grid;place-items:center;border-radius:50%;flex:none}
+.pl .ci{width:52px;height:52px;margin:0 auto 4px;background:var(--soft);color:var(--br)}
+.ci .ic{width:26px;height:26px}
+.fi{display:flex;gap:12px;align-items:flex-start;border-radius:12px;padding:12px;margin-bottom:10px}
+.fi .ci{width:46px;height:46px;color:#fff}
+.fi b{display:block}
+.fi span{font-size:.88rem;color:var(--mut)}
+.f1{background:rgba(31,79,216,.1)}.f1 .ci{background:#1f4fd8}
+.f2{background:rgba(108,67,216,.12)}.f2 .ci{background:#6c43d8}
+.f3{background:rgba(11,125,110,.12)}.f3 .ci{background:#0b7d6e}
+.ft{background:#0c1442;color:#e6e9ff;text-align:center;padding:16px;font:italic 1.1rem "Segoe Script","Brush Script MT",cursive;margin-top:10px}
+.at{display:block;max-width:100%;max-height:240px;border-radius:10px;border:1px solid var(--ln);margin:8px 0;cursor:zoom-in}
+.at.z{max-height:none;cursor:zoom-out}
+</style>
+</head>
+<body>
+<header><div class="w hd">
+<a class="lg" href="#utama" aria-label="SpeKtur, laman utama"><svg viewBox="0 0 48 56" width="40" height="46" aria-hidden="true"><path d="M24 2 44 9v18c0 13-8 22-20 27C12 49 4 40 4 27V9z" fill="#1c2a78" stroke="#e6b422" stroke-width="3"/><path d="M12 20c5-2 9-1 12 2 3-3 7-4 12-2v16c-5-2-9-1-12 2-3-3-7-4-12-2z" fill="#fff"/><path d="M24 22v16" stroke="#1c2a78" stroke-width="2"/></svg><span><b>SpeKtur</b><small>Sistem Perlindungan &amp; Intervensi Sahsiah Terpadu</small></span></a>
+<nav><a href="#utama">Laman Utama</a><a href="#maklumat">Maklumat</a><a href="#statistik">Statistik</a><a href="#faq">Soalan Lazim</a><a class="lm" href="#panel">Log Masuk</a></nav>
+<button id="th" class="th" type="button" aria-label="Tukar mod cerah atau gelap">🌙 Mod Gelap</button>
+</div></header>
+<main>
+<section id="v-utama" class="v">
+<div class="hero"><div class="w hr">
+<div class="ht"><h1>Spe<span>K</span>tur</h1>
+<h2>Lapor dengan <em>Selamat</em>,<br>Bertindak dengan <em>Tepat</em></h2>
+<p class="sub">Platform digital untuk membendung dan menangani salah laku moral di sekolah.</p>
+<a class="cta" href="#aduan">Buat Aduan</a></div>
+<div class="hp"><p class="sl">Sekolah Selamat,<br>Murid Sejahtera</p><svg class="ph" viewBox="0 0 160 300" role="img" aria-label="Telefon pintar dengan butang Lapor"><rect x="4" y="4" width="152" height="292" rx="26" fill="#0a1033" stroke="#c9d3ff" stroke-width="4"/><rect x="58" y="12" width="44" height="8" rx="4" fill="#26307a"/><path d="M80 66 112 78v26c0 20-13 34-32 42C61 138 48 124 48 104V78z" fill="#1c2a78" stroke="#e6b422" stroke-width="3"/><path d="M62 94c7-2 13-1 18 3 5-4 11-5 18-3v22c-7-2-13-1-18 3-5-4-11-5-18-3z" fill="#fff"/><text x="80" y="182" text-anchor="middle" fill="#fff" font-size="20" font-weight="800">SpeKtur</text><rect x="36" y="220" width="88" height="34" rx="17" fill="#7b4be8"/><text x="80" y="242" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">Lapor</text></svg></div>
+</div></div>
+<div class="w">
+<div class="tiles">
+<a class="ti t1" href="#aduan"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10v4h3l8 4V6L6 10z"/><path d="M17 9a4 4 0 0 1 0 6"/><path d="M6 14l1.5 6h3L9 15"/></svg><span><b>Buat Aduan</b>Laporkan salah laku secara sulit.</span><i>›</i></a>
+<a class="ti t2" href="#status"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span><b>Semak Status Aduan</b>Ketahui perkembangan aduan anda.</span><i>›</i></a>
+<a class="ti t3" href="#bantuan"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15 12 20 12 20z"/></svg><span><b>Dapatkan Bantuan</b>Sokongan kaunseling dan bimbingan.</span><i>›</i></a>
+<a class="ti t4" href="#panel"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><circle cx="12" cy="10" r="2"/><path d="M8 16c1-2 2.2-2.6 4-2.6s3 .6 4 2.6"/></svg><span><b>Untuk Guru</b>Akses khas guru (disiplin, HEM, kaunseling).</span><i>›</i></a>
+</div>
+<div class="ig">
+<div class="pn"><h2 class="pt"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>Apa itu SpeKtur?</h2>
+<p><b>SpeKtur (Sistem Perlindungan &amp; Intervensi Sahsiah Terpadu)</b> ialah platform digital inovatif yang dibangunkan khas untuk membendung dan menangani isu salah laku moral yang berat, termasuk gejala bersekedudukan dan kegiatan tidak bermoral di peringkat sekolah menengah.</p>
+<p>Dicipta dengan konsep “Lapor dengan Selamat, Bertindak dengan Tepat”, SpeKtur menghubungkan maklumat secara terus dan serentak kepada 4 tonggak utama sekolah:</p>
+<div class="pl"><div><span class="ci"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M6 20h12M5 7h14M5 7l-2 6a3 3 0 0 0 4 0zM19 7l-2 6a3 3 0 0 0 4 0z"/></svg></span>Guru Disiplin</div><span class="pp">+</span><div><span class="ci"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3.5 3-5.5 6-5.5s6 2 6 5.5M15 15c3 0 6 1.5 6 5"/></svg></span>PK HEM</div><span class="pp">+</span><div><span class="ci"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15 12 20 12 20z"/></svg></span>Unit Kaunseling</div><span class="pp">+</span><div><span class="ci"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 21c0-4.5 3.5-7 7-7s7 2.5 7 7z"/></svg></span>Pengetua</div></div></div>
+<div class="pn"><h2 class="pt"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Kenapa SpeKtur Diperlukan?</h2>
+<div class="fi f1"><span class="ci"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div><b>Kerahsiaan Terjamin (Whistleblower Protection)</b><span>Pelajar boleh melaporkan salah laku tanpa bimbang diugut atau dikenali oleh rakan sekelas, kerana identiti dilindungi sepenuhnya oleh sistem.</span></div></div>
+<div class="fi f2"><span class="ci"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span><div><b>Bebas Dari Aduan Palsu (Anti-Abuse Safeguard)</b><span>Sistem ini dilengkapi tapisan ketat oleh Guru Disiplin. Pelajar yang sengaja membuat aduan palsu atau berniat fitnah akan dikenakan tindakan disiplin serta-merta bagi mengekalkan integriti sistem.</span></div></div>
+<div class="fi f3"><span class="ci"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15 12 20 12 20z"/></svg></span><div><b>Intervensi Menyeluruh (Disiplin + Kaunseling)</b><span>Bukan sekadar menghukum. Setiap kes yang sah akan melalui proses tindakan disiplin yang tegas berserta sesi kaunseling pemulihan sahsiah secara berterusan.</span></div></div>
+</div></div></div>
+</section>
+<div class="w">
+<section id="v-maklumat" class="v"><h1>Maklumat</h1><div class="c"><h2>Aliran Kerja</h2><ol class="fl">
+<li><b>Pengenalan murid</b> dengan nama penuh, kelas dan No. IC yang disahkan dengan rekod sekolah. Identiti pengadu dirahsiakan daripada murid lain.</li>
+<li><b>Borang berasaskan bukti</b>: kategori, tarikh, masa, lokasi dan butiran kejadian.</li>
+<li><b>Saringan Guru Disiplin</b>: Sah, Bukti tidak mencukupi atau Palsu.</li>
+<li><b>Intervensi dua hala</b>: Guru Disiplin + PK HEM siasat, UBK beri kaunseling, Pengetua menyokong dan memantau ringkasan kes.</li></ol></div>
+</section>
+<section id="v-statistik" class="v"><h1>Statistik</h1><div id="stt" class="s"></div><div class="c"><h2>Aduan mengikut kategori</h2><ul id="cat" class="fl"></ul></div></section>
+<section id="v-faq" class="v"><h1>Soalan Lazim</h1><div class="c"><h2>Soalan Lazim &amp; Privasi</h2>
+<details><summary>Kenapa saya perlu beri nama, kelas dan IC?</summary><p>Untuk mengesahkan anda murid sekolah ini dan membolehkan guru mengesan aduan palsu. Maklumat ini tidak dipaparkan kepada murid lain.</p></details>
+<details><summary>Siapa nampak identiti saya?</summary><p>Hanya Guru Disiplin dan PK HEM. UBK dan Pengetua melihat “Dirahsiakan”.</p></details>
+<details><summary>Bagaimana jika aduan saya tidak dapat dibuktikan?</summary><p>Jika dibuat dengan niat baik, tiada tindakan ke atas anda. Tindakan disiplin hanya untuk aduan yang disahkan palsu atau berniat jahat selepas semakan.</p></details>
+<details><summary>Boleh muat naik gambar atau video?</summary><p>Jangan muat naik imej atau video intim atau tidak senonoh. Terangkan dalam teks; guru akan mengumpul bukti mengikut prosedur.</p></details>
+<details><summary>Penafian &amp; Polisi Privasi</summary><p>Maklumat aduan hanya digunakan oleh pihak sekolah untuk tujuan siasatan dan bimbingan, dan tertakluk kepada PDPA 2010 serta polisi KPM dan sekolah.</p></details></div>
+</section>
+<section id="v-bantuan" class="v"><h1>Dapatkan Bantuan</h1>
+<div class="c"><h2>Unit Bimbingan &amp; Kaunseling sekolah</h2><p>Anda boleh berjumpa guru kaunseling sekolah, atau meminta Guru Disiplin merujuk anda. Sesi kaunseling bertujuan membantu, bukan menghukum.</p></div>
+<div class="c"><h2>Talian bantuan kebangsaan</h2><p><b>Talian Kasih 15999</b>: aduan keganasan dan penderaan kanak-kanak.<br><b>Befrienders KL 03-7627 2929</b>: sokongan emosi, 24 jam.</p></div></section>
+<section id="v-aduan" class="v"><h1>Aduan Baharu</h1>
+<form id="f" class="c">
+<div class="n x">⚠️ Aduan palsu atau berniat jahat boleh dikenakan tindakan disiplin. Dilarang memuat naik gambar atau video intim atau tidak senonoh.</div>
+<label for="rn">Nama Penuh Pengadu (seperti dalam kad pengenalan)</label><input id="rn" required autocomplete="off">
+<div class="r"><div><label for="rk">Kelas (semua huruf besar)</label><input id="rk" required autocomplete="off" placeholder="cth: 4 AMANAH"></div>
+<div><label for="ri">No. Kad Pengenalan (IC)</label><input id="ri" required inputmode="numeric" maxlength="14" autocomplete="off" placeholder="cth: 080512101234" pattern="\d{6}-?\d{2}-?\d{4}"></div></div>
+<p class="m" style="font-size:.85rem;margin:6px 0 0">Maklumat ini disemak dengan rekod sekolah. Hanya Guru Disiplin dan PK HEM boleh melihatnya, untuk mengesan aduan palsu.</p>
+<div class="r"><div><label for="ct">Kategori</label><select id="ct"></select></div>
+<div><label for="dt">Tarikh Kejadian</label><input id="dt" type="date" required></div>
+<div><label for="tm">Masa</label><input id="tm" type="time" required></div></div>
+<label for="lc">Lokasi</label><input id="lc" required placeholder="cth: Belakang blok C">
+<label for="wh">Murid Yang Terlibat (nama / kelas)</label><input id="wh" required>
+<label for="ds">Butiran Kejadian (minimum 30 aksara)</label><textarea id="ds" rows="4" minlength="30" required></textarea>
+<label for="sk">Saksi (jika ada)</label><input id="sk">
+<label for="fl">Lampiran Sokongan (pilihan; PDF maksimum 700 KB; bukan imej intim)</label><input id="fl" type="file" accept="image/*,.pdf">
+<label style="font-weight:400"><input id="ag" type="checkbox" required style="width:auto"> Saya mengaku maklumat ini benar dan faham aduan palsu boleh dikenakan tindakan disiplin.</label>
+<p id="fe" class="m" style="color:var(--bd);margin:8px 0 0" role="alert"></p>
+<p><button class="b">Hantar Aduan</button></p>
+</form>
+<div id="done" class="c" hidden></div></section>
+
+<section id="v-status" class="v"><h1>Semak Aduan</h1>
+<form id="tf" class="c"><label for="tid">No. Rujukan</label><div class="f"><input id="tid" required placeholder="cth: ESH-0003"><button class="b">Semak</button></div></form>
+<div id="tr"></div></section>
+
+<section id="v-panel" class="v"><h1>Panel Pegawai</h1>
+<form id="lf" class="c"><label for="ro" style="margin-top:0">Daftar masuk sebagai</label>
+<select id="ro"><option>Guru Disiplin</option><option>PK HEM</option><option>Unit Bimbingan &amp; Kaunseling</option><option>Pengetua</option></select>
+<label for="pw">Kata laluan</label><input id="pw" type="password" required autocomplete="off">
+<p id="le" class="m" style="color:var(--bd);margin:8px 0 0" role="alert"></p>
+<p><button class="b">Log masuk</button></p></form>
+<div id="pa" hidden>
+<div class="c"><b id="who"></b> <button id="lo" class="b o" type="button">Log keluar</button><p id="rd" class="m" style="margin:8px 0 0"></p></div>
+<div id="st" class="s"></div><div id="ls"></div>
+<div id="rs" class="c" hidden><h2>Senarai murid sekolah</h2>
+<p class="m">Aduan hanya diterima daripada murid dalam senarai ini. Tampal satu murid setiap baris: Nama penuh, Kelas, No. IC.</p>
+<textarea id="rt" rows="4" placeholder="Ali bin Abu, 4 Amanah, 080512-10-1234"></textarea>
+<p><button id="ra" class="b" type="button">Tambah ke senarai</button> <span id="rm" class="m"></span></p>
+<div id="rl"></div></div>
+</div></section>
+
+</div>
+</main>
+<footer class="ft">SpeKtur – Bersama Membina Sekolah yang Lebih Bermoral</footer>
+<script>
+const $=i=>document.getElementById(i),
+esc=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m])),
+CAT=["Hubungan tidak bermoral / bersekedudukan","Buli","Merokok / vape","Vandalisme","Lain-lain"],
+ST={p:["Menunggu Pengesahan","wn"],v:["Sah – Intervensi Berjalan","ok"],u:["Bukti Tidak Mencukupi","mu"],m:["Aduan Palsu – Tindakan Disiplin","bd"],c:["Kes Selesai","mu"]},
+RO={"Guru Disiplin":"Saring setiap aduan dalam 24 jam dan tentukan kesahihannya.","PK HEM":"Selaras intervensi bersama Guru Disiplin dan UBK.","Unit Bimbingan & Kaunseling":"Kendalikan sesi kaunseling untuk mengenal pasti punca akar.","Pengetua":"Pantau ringkasan kes dan beri sokongan dasar."},
+MSG={v:"Disahkan Guru Disiplin; kes dikongsi dengan PK HEM, UBK dan Pengetua",u:"Bukti tidak mencukupi; pengadu bertindak suci hati, tiada tindakan ke atasnya",m:"Disahkan palsu atau berniat jahat; pengadu dirujuk untuk tindakan disiplin dan kaunseling",c:"Intervensi selesai; kes ditutup oleh Guru Disiplin"},
+fmt=d=>new Date(d).toLocaleString("ms-MY",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}),
+bg=s=>{const k=ST[s]||ST.p;return `<span class="k ${k[1]}">${k[0]}</span>`},
+tl=x=>`<ul class="tl">${x.g.map(l=>`<li>${esc(l)}</li>`).join("")}</ul>`,
+today=()=>new Date().toISOString().slice(0,10),
+R=document.documentElement,
+cur=()=>R.dataset.theme||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light"),
+lab=()=>{$("th").textContent=cur()=="dark"?"☀️ Mod Cerah":"🌙 Mod Gelap"};
+
+let D=[];
+try{const p=JSON.parse(localStorage.getItem("esahabat")||"[]");if(Array.isArray(p))D=p}catch(e){}
+const save=()=>{try{localStorage.setItem("esahabat",JSON.stringify(D));return true}catch(e){return false}};
+
+try{const s=localStorage.getItem("th");if(s)R.dataset.theme=s}catch(e){}
+lab();
+$("th").onclick=()=>{const t=cur()=="dark"?"light":"dark";R.dataset.theme=t;try{localStorage.setItem("th",t)}catch(e){}lab()};
+
+$("ct").innerHTML=CAT.map((c,i)=>`<option value="${i}">${c}</option>`).join("");
+$("dt").value=today();
+
+function go(){const h=location.hash.slice(1),v=["utama","maklumat","statistik","faq","aduan","status","bantuan","panel"].includes(h)?h:"utama";
+document.querySelectorAll(".v").forEach(e=>e.classList.toggle("on",e.id=="v-"+v));
+document.querySelectorAll("nav a").forEach(a=>a.classList.toggle("on",a.hash=="#"+v));
+if(v=="panel")panel();if(v=="statistik")stat()}
+
+function stat(){const n=s=>D.filter(d=>d.s==s).length;
+$("stt").innerHTML=[["Jumlah aduan",D.length],["Menunggu",n("p")],["Sah",n("v")],["Tidak cukup bukti",n("u")],["Palsu",n("m")],["Selesai",n("c")]].map(a=>`<div><b>${a[1]}</b><br>${a[0]}</div>`).join("");
+$("cat").innerHTML=CAT.map((c,i)=>`<li>${c}: <b>${D.filter(d=>d.c==i).length}</b></li>`).join("")}
+
+/* KATA LALUAN PEGAWAI: tukar di sini. Sesiapa yang boleh membuka fail ini boleh membacanya. */
+const KATA={"Guru Disiplin":"oEsv2y3APi","PK HEM":"r7Re3g5NVH","Unit Bimbingan & Kaunseling":"VJxtQdXHk4","Pengetua":"dYQCshXdNo"};
+let ROLE=null,tries=0,lockT=0,M=[];
+try{const p=JSON.parse(localStorage.getItem("esahabat_murid")||"[]");if(Array.isArray(p))M=p}catch(e){}
+const saveM=()=>{try{localStorage.setItem("esahabat_murid",JSON.stringify(M))}catch(e){}},
+digits=s=>String(s).replace(/\D/g,""),
+norm=s=>String(s).trim().replace(/\s+/g," ").toLowerCase(),
+mask=i=>"******-**-"+digits(i).slice(-4);
+
+const att=x=>x.at.t.startsWith("image/")?`<img class="at" src="${esc(x.at.u)}" alt="Lampiran aduan ${esc(x.id)}">`:`<p><button class="b o" type="button" data-f="${esc(x.id)}">Buka lampiran PDF (${esc(x.at.n)})</button></p>`,
+prep=f=>new Promise((ok,no)=>{
+if(f.type=="application/pdf"){if(f.size>7e5)return no(new Error("PDF terlalu besar (maksimum 700 KB)."));
+const r=new FileReader();r.onload=()=>ok({n:f.name,t:f.type,u:r.result});r.onerror=()=>no(new Error("Fail tidak dapat dibaca."));r.readAsDataURL(f);return}
+if(!f.type.startsWith("image/"))return no(new Error("Hanya gambar atau PDF dibenarkan."));
+const u=URL.createObjectURL(f),im=new Image();
+im.onload=()=>{const s=Math.min(1,1280/Math.max(im.width,im.height)),c=document.createElement("canvas"),g=c.getContext("2d");c.width=Math.round(im.width*s);c.height=Math.round(im.height*s);g.fillStyle="#fff";g.fillRect(0,0,c.width,c.height);g.drawImage(im,0,0,c.width,c.height);URL.revokeObjectURL(u);ok({n:f.name,t:"image/jpeg",u:c.toDataURL("image/jpeg",.75)})};
+im.onerror=()=>{URL.revokeObjectURL(u);no(new Error("Gambar tidak dapat dibaca."))};im.src=u});
+
+function roster(){const o=$("rl").querySelector("details"),op=o&&o.open;
+$("rl").innerHTML=`<details ${op?"open":""}><summary>${M.length} murid dalam senarai</summary>${M.map((m,i)=>`<p class="m">${esc(m.n)}, ${esc(m.k)} · ${mask(m.i)} · Amaran: ${m.x||0}${m.b?" · <b>Disekat</b>":""} <button class="b o" type="button" data-u="${i}">${m.b?"Buka sekatan":"Sekat"}</button> <button class="b o" type="button" data-r="${i}">Buang</button></p>`).join("")}</details>`}
+
+function panel(){$("lf").hidden=!!ROLE;$("pa").hidden=!ROLE;if(!ROLE)return;
+const gd=ROLE=="Guru Disiplin",see=gd||ROLE=="PK HEM",n=s=>D.filter(d=>d.s==s).length;
+$("who").textContent="Log masuk sebagai "+ROLE;$("rd").textContent=RO[ROLE];$("rs").hidden=false;
+$("st").innerHTML=[["Jumlah",D.length],["Menunggu",n("p")],["Sah",n("v")],["Tidak cukup bukti",n("u")],["Palsu",n("m")],["Selesai",n("c")]].map(a=>`<div><b>${a[1]}</b><br>${a[0]}</div>`).join("");
+$("ls").innerHTML=D.length?D.slice().reverse().map(x=>`<div class="c"><b>${esc(x.id)}</b>${bg(x.s)}<p><b>${CAT[x.c]}</b> · ${esc(x.dt)} ${esc(x.tm)} · ${esc(x.lc)}</p><p>${esc(x.ds)}</p>${x.at?att(x):""}<p class="m">Murid terlibat: ${esc(x.wh)} · Pengadu: ${see?esc(x.rp)+(x.ri?" · IC "+mask(x.ri):""):"🔒 Dirahsiakan"}</p>${tl(x)}${x.s=="p"?(gd?`<p><button class="b ok" data-i="${esc(x.id)}" data-a="v">Sah – mulakan intervensi</button> <button class="b" data-i="${esc(x.id)}" data-a="u">Bukti tidak mencukupi</button> <button class="b bd" data-i="${esc(x.id)}" data-a="m">Palsu / berniat jahat</button></p>`:`<p class="m">Menunggu saringan Guru Disiplin.</p>`):x.s=="v"?`<p class="m">✔ Kes dikongsi dengan PK HEM, UBK dan Pengetua.</p>${gd?`<p><button class="b" data-i="${esc(x.id)}" data-a="c">Tandakan kes selesai</button></p>`:""}`:gd?`<p><button class="b o" data-i="${esc(x.id)}" data-a="d">Buang kes</button></p>`:""}</div>`).join(""):`<div class="c">Belum ada aduan diterima.</div>`;
+roster()}
+
+$("f").onsubmit=async e=>{e.preventDefault();const f=e.target,er=t=>{$("fe").textContent=t},
+n=$("rn").value,k=$("rk").value,ic=digits($("ri").value),
+m=M.find(s=>norm(s.n)==norm(n)&&norm(s.k)==norm(k)&&digits(s.i)==ic);
+if(ic.length!=12)return er("No. IC mesti 12 digit.");
+if(!M.length)return er("Aduan belum boleh diterima kerana senarai murid belum disediakan oleh sekolah.");
+if(!m)return er("Nama, kelas dan No. IC tidak sepadan dengan rekod sekolah. Semak semula maklumat anda.");
+if(m.b)return er("Anda disekat daripada menghantar aduan. Sila berjumpa Guru Disiplin.");
+if(D.filter(d=>d.ri==ic&&d.ts>Date.now()-864e5).length>=3)return er("Had 3 aduan sehari telah dicapai. Cuba semula esok.");
+er("");
+let at=null;const fl=$("fl").files[0],sb=f.querySelector("button.b");sb.disabled=true;
+if(fl){try{at=await prep(fl)}catch(x){sb.disabled=false;return er(x.message)}}
+const id="ESH-"+Array.from(crypto.getRandomValues(new Uint8Array(6)),b=>"ABCDEFGHJKMNPQRSTUVWXYZ23456789"[b%31]).join("");
+D.push({id,c:+$("ct").value,dt:$("dt").value,tm:$("tm").value,lc:$("lc").value,wh:$("wh").value,ds:$("ds").value,rp:m.n+", "+m.k,ri:ic,ts:Date.now(),at,s:"p",g:[fmt(Date.now())+" – Aduan diterima"]});
+if(!save()){D.pop();sb.disabled=false;return er("Lampiran terlalu besar untuk disimpan. Cuba fail yang lebih kecil atau hantar tanpa lampiran.")}
+sb.disabled=false;
+f.reset();$("dt").value=today();f.hidden=true;$("done").hidden=false;
+$("done").innerHTML=`<h2>✅ Aduan diterima</h2><p>No. Rujukan anda: <b>${id}</b>. Simpan nombor ini untuk menyemak status. Guru Disiplin akan menyaring aduan dalam 24 jam. Identiti anda dirahsiakan daripada murid lain.</p><a class="b" href="#status" onclick="$('tid').value='${id}'">Semak status</a> <button class="b o" onclick="$('f').hidden=false;$('done').hidden=true">Hantar aduan lain</button>`};
+
+$("tf").onsubmit=e=>{e.preventDefault();const x=D.find(d=>d.id==$("tid").value.trim().toUpperCase());
+$("tr").innerHTML=x?`<div class="c"><b>${esc(x.id)}</b>${bg(x.s)}<p class="m">${CAT[x.c]} · ${esc(x.lc)}</p>${tl(x)}</div>`:`<div class="c">Tiada rekod untuk No. Rujukan ini.</div>`};
+
+$("lf").onsubmit=e=>{e.preventDefault();const er=t=>{$("le").textContent=t};
+if(Date.now()<lockT)return er("Terlalu banyak cubaan. Cuba lagi selepas seminit.");
+const r=$("ro").value;
+if($("pw").value===KATA[r]){ROLE=r;tries=0;er("");$("pw").value="";panel()}
+else{if(++tries>=5){lockT=Date.now()+6e4;tries=0}er("Kata laluan salah.")}};
+$("lo").onclick=()=>{ROLE=null;panel()};
+
+$("ls").onclick=e=>{const im=e.target.closest("img.at");if(im){im.classList.toggle("z");return}
+const pf=e.target.closest("button[data-f]");
+if(pf){const q=D.find(d=>d.id==pf.dataset.f);if(q&&q.at&&/^data:application\/pdf;base64,/.test(q.at.u)){const s=atob(q.at.u.split(",")[1]),a=new Uint8Array(s.length);for(let i=0;i<s.length;i++)a[i]=s.charCodeAt(i);window.open(URL.createObjectURL(new Blob([a],{type:"application/pdf"})))}return}
+const b=e.target.closest("button[data-a]");if(!b||ROLE!="Guru Disiplin")return;const x=D.find(d=>d.id==b.dataset.i),a=b.dataset.a;if(!x)return;
+if(a=="d"){if("umc".includes(x.s)&&confirm("Buang kes "+x.id+" secara kekal?")){D.splice(D.indexOf(x),1);save();panel()}return}
+if(!MSG[a]||(a=="c"?x.s!="v":x.s!="p"))return;
+x.s=a;x.g.push(fmt(Date.now())+" – "+MSG[a]);save();
+if(a=="m"){const m=M.find(s=>digits(s.i)==x.ri);if(m){m.x=(m.x||0)+1;if(m.x>=2)m.b=true;saveM()}}
+panel()};
+
+$("ra").onclick=()=>{let ok=0,bad=0;
+$("rt").value.split("\n").forEach(l=>{const p=l.split(",").map(s=>s.trim());
+if(p.length==3&&p[0]&&p[1]&&digits(p[2]).length==12){if(!M.some(m=>digits(m.i)==digits(p[2]))){M.push({n:p[0],k:p[1],i:digits(p[2]),x:0,b:false});ok++}}else if(l.trim())bad++});
+saveM();$("rt").value="";$("rm").textContent=ok+" ditambah"+(bad?", "+bad+" baris tidak sah":"");roster()};
+$("rl").onclick=e=>{if(!ROLE)return;const b=e.target.closest("button[data-u],button[data-r]");if(!b)return;
+if(b.dataset.r!==undefined){const m=M[+b.dataset.r];if(m&&confirm("Buang "+m.n+" daripada senarai murid?")){M.splice(+b.dataset.r,1);saveM();roster()}return}
+const m=M[+b.dataset.u];if(!m)return;m.b=!m.b;if(!m.b)m.x=0;saveM();roster()};
+
+addEventListener("hashchange",go);go();
+
+</script>
+</body>
+</html>
